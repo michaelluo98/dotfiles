@@ -21,6 +21,12 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <C-h> :History<CR>
 nnoremap <C-b> :Buffers<CR>
 
+" Grip
+let g:grip_default_map = 0
+nnoremap <C-m> :GripStart<CR>
+nnoremap <F5> :GripClean!<CR>
+
+
 " General Config:
 set nocompatible "better safe than sorry
 set clipboard=unnamed "ensure in vim version has +clipboard

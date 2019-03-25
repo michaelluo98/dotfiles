@@ -42,6 +42,7 @@ brew install ag
 brew install tmux
 brew install sqlite3
 brew install tree
+brew install grip
 
 
 brew cleanup

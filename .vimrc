@@ -31,6 +31,7 @@ nnoremap <F5> :GripClean!<CR>
 set nocompatible "better safe than sorry
 set clipboard=unnamed "ensure in vim version has +clipboard
 set showmode 
+set backspace=indent,eol,start
 set number "show line numbers
 set relativenumber
 set autoindent 

@@ -17,7 +17,7 @@ let g:ackprg = 'ag --vimgrep'
 
 " FZF
 set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-t> :Files<Cr>
 nnoremap <C-h> :History<CR>
 nnoremap <C-b> :Buffers<CR>
 

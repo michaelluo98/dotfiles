@@ -9,6 +9,15 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# zsh vi mode
+bindkey -v
+export KEYTIMEOUT=1 # kill the lag
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
 setopt nosharehistory 
 
 source ~/.bash_profile
@@ -23,13 +32,6 @@ export GH_OAUTH_TOKEN=615948363d27ab0a087833123321febb2d184e2d
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--extended"
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 
 # Functions
 # ch - browse chrome history
@@ -48,6 +50,16 @@ ch() {
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
 }
 
-# Custom Mappings
-bindkey '^h' backward-word
-bindkey '^l' forward-word
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[green]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--extended"
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

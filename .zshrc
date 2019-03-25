@@ -12,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 setopt nosharehistory 
 
 source ~/.bash_profile
-
 alias vi=/usr/local/bin/vim
 alias vim=/usr/local/bin/vim
 alias fzft=fzf-tmux
@@ -48,3 +47,7 @@ ch() {
   awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
 }
+
+# Custom Mappings
+bindkey '^h' backward-word
+bindkey '^l' forward-word

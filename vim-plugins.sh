@@ -12,3 +12,4 @@ git clone https://github.com/Yggdroot/indentLine.git ~/.vim/bundle/indentLine
 git clone https://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary
 git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 git clone https://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
+git clone https://github.com/godlygeek/tabular.git ~/.vim/bundle/tabular

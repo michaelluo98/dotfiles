@@ -26,6 +26,14 @@ let g:grip_default_map = 0
 nnoremap <C-m> :GripStart<CR>
 nnoremap <F5> :GripClean!<CR>
 
+" Tabular
+if exists(":Tabularize")
+	nmap <Leader>a= :Tabularize /=<CR>
+	vmap <Leader>a= :Tabularize /=<CR>
+	nmap <Leader>a: :Tabularize /:\zs<CR>
+	vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
 
 " General Config:
 set nocompatible "better safe than sorry
@@ -75,6 +83,6 @@ map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
 map <leader>m <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
-nnoremap <leader>a :Ag<space>
+nnoremap <leader>ag :Ag<space>
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count) " repeat.vim

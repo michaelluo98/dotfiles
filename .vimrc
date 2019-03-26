@@ -76,3 +76,5 @@ map <leader>h :noh <CR>
 map <leader>m <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
 nnoremap <leader>a :Ag<space>
+
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count) " repeat.vim

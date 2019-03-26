@@ -3,9 +3,9 @@ execute pathogen#infect()
 filetype plugin indent on "enable plugins
 syntax enable "enables syntax highlighting
 
-" IndentGuides 
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
+" IndentLine
+let g:indentLine_char = '¦'
+map <leader>ig :IndentLinesToggle<CR>
 
 "NERDTree
 map <C-n> :NERDTreeToggle<CR>

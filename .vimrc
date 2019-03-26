@@ -2,6 +2,7 @@
 execute pathogen#infect()
 filetype plugin indent on "enable plugins
 syntax enable "enables syntax highlighting
+let mapleader = ","
 
 " IndentLine
 let g:indentLine_char = '¦'
@@ -52,6 +53,7 @@ set colorcolumn=80 "highlights the 80th line
 set listchars=tab:▸\ ,eol:¬
 set hidden "modified buffers can be hidden without saving
 set backupcopy=yes "dev servers hot reloading
+set regexpengine=1 "use vim's old regex engine
 
 " Folding 
 set foldmethod=indent   
@@ -77,12 +79,12 @@ colorscheme gruvbox
 
 
 " Custom Mappings:
-let mapleader = ","
 map <leader>p :set paste! paste? <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
 map <leader>m <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
 nnoremap <leader>ag :Ag<space>
+nmap <leader>pr orequire "pry-byebug"; binding.pry<esc>
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count) " repeat.vim

@@ -35,6 +35,14 @@ if exists(":Tabularize")
 	vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
+" vim-ruby
+" - adds motion commands and text objects selection
+" - auto completions are mapped to CTRL-X and CTRL-O
+let g:ruby_indent_assignment_style = 'variable'
+let ruby_space_errors = 1
+let ruby_fold = 1
+" let ruby_no_expensive = 1
+" let g:ruby_recommended_style = 0
 
 " General Config:
 set nocompatible "better safe than sorry
@@ -55,11 +63,11 @@ set hidden "modified buffers can be hidden without saving
 set backupcopy=yes "dev servers hot reloading
 set regexpengine=1 "use vim's old regex engine
 
-" Folding 
-set foldmethod=indent   
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
+" Folding typically handled by plugin
+"set foldmethod=indent   
+"set foldnestmax=10
+"set nofoldenable
+"set foldlevel=2
 
 " Spaces & Tabs
 set expandtab "tabs are spaces
@@ -82,7 +90,7 @@ colorscheme gruvbox
 map <leader>p :set paste! paste? <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
-map <leader>m <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
+map <leader>mo <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
 nnoremap <leader>ag :Ag<space>
 nmap <leader>pr orequire "pry-byebug"; binding.pry<esc>

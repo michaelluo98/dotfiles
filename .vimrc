@@ -46,7 +46,6 @@ let ruby_fold = 1
 
 " General Config:
 set nocompatible "better safe than sorry
-set clipboard=unnamed "ensure in vim version has +clipboard
 set showmode 
 set backspace=indent,eol,start
 set number "show line numbers
@@ -62,6 +61,7 @@ set listchars=tab:▸\ ,eol:¬
 set hidden "modified buffers can be hidden without saving
 set backupcopy=yes "dev servers hot reloading
 set regexpengine=1 "use vim's old regex engine
+"set clipboard=unnamed "ensure in vim version has +clipboard
 
 " Folding typically handled by plugin
 "set foldmethod=indent   

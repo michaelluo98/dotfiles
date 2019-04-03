@@ -22,11 +22,6 @@ nnoremap <C-t> :Files<Cr>
 nnoremap <C-h> :History<CR>
 nnoremap <C-b> :Buffers<CR>
 
-" Grip
-let g:grip_default_map = 0
-nnoremap <C-m> :GripStart<CR>
-nnoremap <F5> :GripClean!<CR>
-
 " Tabular
 if exists(":Tabularize")
 	nmap <Leader>a= :Tabularize /=<CR>

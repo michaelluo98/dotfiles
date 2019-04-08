@@ -15,3 +15,7 @@
 - [ ] altc bindings: preferences -> profile -> keyboard tab -> select behavior of option key to Esc+
   - [reference](https://github.com/junegunn/fzf/issues/164)
 - [ ] map caps-lock to esc
+
+#### Other
+- [ ] set up grip personal access token
+  - [reference](https://github.com/joeyespo/grip/tree/offline-renderer#configuration)

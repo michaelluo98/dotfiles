@@ -1,5 +1,6 @@
 # ZSH config
-export ZSH="/Users/mluo/.oh-my-zsh"
+
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
@@ -26,6 +27,7 @@ alias vim=/usr/local/bin/vim
 alias fzft=fzf-tmux
 
 alias startgrip="grip --pass 5d3e32d460b00b8dec8b51534e1b49e47e42b9b6"
+alias youtube-mp3="youtube-dl -x --audio-format mp3 -o \"~/youtube/%(title)s.%(ext)s\""
 
 export DEVOPS_HOME=/Users/mluo/workspace/ansible-playbooks
 export GH_OAUTH_TOKEN=615948363d27ab0a087833123321febb2d184e2d

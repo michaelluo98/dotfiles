@@ -43,6 +43,8 @@ brew install tmux
 brew install sqlite3
 brew install tree
 brew install grip
+brew install ffmpeg
+brew install youtube-dl
 
 
 brew cleanup

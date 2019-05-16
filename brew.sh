@@ -41,6 +41,7 @@ brew install ag
 brew install docker
 brew install tmux
 brew install sqlite3
+brew install postgresql
 brew install tree
 brew install grip
 

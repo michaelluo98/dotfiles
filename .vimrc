@@ -2,7 +2,7 @@
 execute pathogen#infect()
 filetype plugin indent on "enable plugins
 syntax enable "enables syntax highlighting
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " IndentLine
 let g:indentLine_char = '¦'
@@ -16,7 +16,7 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 " Ackvim
 let g:ackprg = 'ag --vimgrep'
 
-" FZF
+" FZF 
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-t> :Files<Cr>
 nnoremap <C-h> :History<CR>
@@ -28,9 +28,7 @@ if exists(":Tabularize")
 	vmap <Leader>a= :Tabularize /=<CR>
 	nmap <Leader>a: :Tabularize /:\zs<CR>
 	vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
-
-" vim-ruby
+endif " vim-ruby
 " - adds motion commands and text objects selection
 " - auto completions are mapped to CTRL-X and CTRL-O
 let g:ruby_indent_assignment_style = 'variable'
@@ -58,7 +56,7 @@ set backupcopy=yes "dev servers hot reloading
 set regexpengine=1 "use vim's old regex engine
 "set clipboard=unnamed "ensure in vim version has +clipboard
 
-" Folding typically handled by plugin
+" Folding typically handled by language plugin
 "set foldmethod=indent   
 "set foldnestmax=10
 "set nofoldenable
@@ -80,14 +78,16 @@ let g:rehash256 = 1
 set background=dark
 colorscheme gruvbox
 
-
 " Custom Mappings:
 map <leader>p :set paste! paste? <CR>
+map <leader>c :set clipboard=unnamed <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
 map <leader>mo <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
 nnoremap <leader>ag :Ag<space>
 nmap <leader>pr orequire "pry-byebug"; binding.pry<esc>
+nnoremap <leader>fp :let @+=expand('%:p')<CR>
+nnoremap <leader>rp :let @+=expand('%:.p')<CR>
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count) " repeat.vim

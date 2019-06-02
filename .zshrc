@@ -53,12 +53,13 @@ ch() {
 }
 
 function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[green]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-    zle reset-prompt
+   VIM_PROMPT="%{$fg_bold[green]%} [% NORMAL]%  %{$reset_color%}"
+   RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+   zle reset-prompt
 }
 zle -N zle-line-init
 zle -N zle-keymap-select
+zle-line-init &> /dev/null
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

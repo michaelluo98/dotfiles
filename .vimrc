@@ -2,6 +2,7 @@
 execute pathogen#infect()
 filetype plugin indent on "enable plugins
 syntax enable "enables syntax highlighting
+let mapleader = "\<Space>"
 
 " IndentLine
 let g:indentLine_char = '¦'
@@ -15,16 +16,11 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 " Ackvim
 let g:ackprg = 'ag --vimgrep'
 
-" FZF
+" FZF 
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-t> :Files<Cr>
 nnoremap <C-h> :History<CR>
 nnoremap <C-b> :Buffers<CR>
-
-" Grip
-let g:grip_default_map = 0
-nnoremap <C-m> :GripStart<CR>
-nnoremap <F5> :GripClean!<CR>
 
 " Tabular
 if exists(":Tabularize")
@@ -32,12 +28,17 @@ if exists(":Tabularize")
 	vmap <Leader>a= :Tabularize /=<CR>
 	nmap <Leader>a: :Tabularize /:\zs<CR>
 	vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
-
+endif " vim-ruby
+" - adds motion commands and text objects selection
+" - auto completions are mapped to CTRL-X and CTRL-O
+let g:ruby_indent_assignment_style = 'variable'
+let ruby_space_errors = 1
+let ruby_fold = 1
+" let ruby_no_expensive = 1
+" let g:ruby_recommended_style = 0
 
 " General Config:
 set nocompatible "better safe than sorry
-set clipboard=unnamed "ensure in vim version has +clipboard
 set showmode 
 set backspace=indent,eol,start
 set number "show line numbers
@@ -52,12 +53,14 @@ set colorcolumn=80 "highlights the 80th line
 set listchars=tab:▸\ ,eol:¬
 set hidden "modified buffers can be hidden without saving
 set backupcopy=yes "dev servers hot reloading
+set regexpengine=1 "use vim's old regex engine
+"set clipboard=unnamed "ensure in vim version has +clipboard
 
-" Folding 
-set foldmethod=indent   
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
+" Folding typically handled by language plugin
+"set foldmethod=indent   
+"set foldnestmax=10
+"set nofoldenable
+"set foldlevel=2
 
 " Spaces & Tabs
 set expandtab "tabs are spaces
@@ -75,14 +78,17 @@ let g:rehash256 = 1
 set background=dark
 colorscheme gruvbox
 
-
 " Custom Mappings:
 let mapleader = "\<Space>"
 map <leader>p :set paste! paste? <CR>
+map <leader>c :set clipboard=unnamed <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
-map <leader>m <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
+map <leader>mo <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
 nnoremap <leader>ag :Ag<space>
+nmap <leader>pr orequire "pry-byebug"; binding.pry<esc>
+nnoremap <leader>fp :let @+=expand('%:p')<CR>
+nnoremap <leader>rp :let @+=expand('%:.p')<CR>
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count) " repeat.vim

@@ -77,7 +77,7 @@ colorscheme gruvbox
 
 
 " Custom Mappings:
-let mapleader = ","
+let mapleader = "\<Space>"
 map <leader>p :set paste! paste? <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>

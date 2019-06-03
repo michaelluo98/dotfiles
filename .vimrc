@@ -19,7 +19,7 @@ let g:ackprg = 'ag --vimgrep'
 " FZF 
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-t> :Files<Cr>
-nnoremap <C-h> :History<CR>
+nnoremap <C-p> :History<CR>
 nnoremap <C-b> :Buffers<CR>
 
 " Tabular
@@ -77,6 +77,12 @@ set hlsearch "highlight matches
 let g:rehash256 = 1
 set background=dark
 colorscheme gruvbox
+
+" Moving between panes
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H> 
 
 " Custom Mappings:
 map <leader>p :set paste! paste? <CR>

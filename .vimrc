@@ -49,6 +49,7 @@ set cursorline "highlight current line
 set showcmd "show command in bottom bar
 set wildmenu "visual autocomplete for command menu
 set showmatch "highlight matching [{()}]
+set lazyredraw "speeds up macro execution
 set colorcolumn=80 "highlights the 80th line 
 set listchars=tab:▸\ ,eol:¬
 set hidden "modified buffers can be hidden without saving

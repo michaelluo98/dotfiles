@@ -88,7 +88,9 @@ nnoremap <C-H> <C-W><C-H>
 " Custom Mappings:
 let mapleader = "\<Space>"
 map <leader>p :set paste! paste? <CR>
-map <leader>c :set clipboard=unnamed <CR>
+map <leader>c :set clipboard?<CR>
+map <leader>cc <ESC>:exec &clipboard!=""? "set clipboard=" : "set clipboard=unnamed"<CR>
+map <leader>r :source ~/.vimrc <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
 map <leader>mo <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>

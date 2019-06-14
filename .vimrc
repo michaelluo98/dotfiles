@@ -93,6 +93,7 @@ map <leader>cc <ESC>:exec &clipboard!=""? "set clipboard=" : "set clipboard=unna
 map <leader>r :source ~/.vimrc <CR>
 map <leader>l :set list! list? <CR>
 map <leader>h :noh <CR>
+map <leader>q :q <CR>
 map <leader>mo <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 nnoremap <leader>n :set nu! rnu! <CR>
 nnoremap <leader>ag :Ag<space>

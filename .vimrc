@@ -28,7 +28,9 @@ if exists(":Tabularize")
 	vmap <Leader>a= :Tabularize /=<CR>
 	nmap <Leader>a: :Tabularize /:\zs<CR>
 	vmap <Leader>a: :Tabularize /:\zs<CR>
-endif " vim-ruby
+endif 
+
+" vim-ruby
 " - adds motion commands and text objects selection
 " - auto completions are mapped to CTRL-X and CTRL-O
 let g:ruby_indent_assignment_style = 'variable'
@@ -36,6 +38,10 @@ let ruby_space_errors = 1
 let ruby_fold = 1
 " let ruby_no_expensive = 1
 " let g:ruby_recommended_style = 0
+
+" vim-markdown
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_new_list_item_indent = 2
 
 " General Config:
 set nocompatible "better safe than sorry

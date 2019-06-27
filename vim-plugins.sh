@@ -13,3 +13,4 @@ git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 git clone https://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
 git clone https://github.com/godlygeek/tabular.git ~/.vim/bundle/tabular
 git clone https://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
+git clone https://github.com/plasticboy/vim-markdown.git ~/.vim/bundle/vim-markdown

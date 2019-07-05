@@ -6,7 +6,7 @@ link () {
   read resp
 
   if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-    for file in $( ls -A | grep -vE '.*.sh$|\.git$|\.gitignore|.*.md' ) ; do
+    for file in $( ls -A | grep -vE '.*.sh$|\.git$|.*.swp|.*.md' ) ; do
       echo "linking $file ..."
       ln -fs "$PWD/$file" "$HOME"
     done

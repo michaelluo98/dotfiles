@@ -53,5 +53,8 @@ fi
 # Vim plugins
 ./vim-plugins.sh
 
+echo "Configuring global gitignore"
+git config --global core.excludesfile ~/.gitignore
+
 # Other useful stuff
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

@@ -12,6 +12,7 @@ map <leader>ig :IndentLinesToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-F> :NERDTreeFind<CR>
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let NERDTreeQuitOnOpen=1
 
 " Ackvim
 let g:ackprg = 'ag --vimgrep'

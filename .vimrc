@@ -45,6 +45,7 @@ let g:vim_markdown_new_list_item_indent = 2
 
 " General Config:
 set nocompatible "better safe than sorry
+set linebreak
 set showmode 
 set backspace=indent,eol,start
 set number "show line numbers
@@ -90,6 +91,16 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H> 
+
+" Moving between soft-wrapped text
+vmap <S-j> gj
+vmap <S-k> gk
+vmap <S-4> g$
+vmap <S-6> g^
+nmap <S-j> gj
+nmap <S-k> gk
+nmap <S-4> g$
+nmap <S-6> g^
 
 " Custom Mappings:
 let mapleader = "\<Space>"

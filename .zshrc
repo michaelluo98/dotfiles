@@ -28,7 +28,8 @@ alias fzft=fzf-tmux
 
 alias startgrip="grip --pass 5d3e32d460b00b8dec8b51534e1b49e47e42b9b6" 
 alias youtube-mp3="youtube-dl -x --audio-format mp3 -o \"~/youtube/%(title)s.%(ext)s\"" 
-alias sshuw="ssh m34luo@linux.student.cs.uwaterloo.ca"
+alias sshuw="ssh m35luo@linux.student.cs.uwaterloo.ca"
+alias sshuwdb="ssh m35luo@ubuntu1604-002.student.cs.uwaterloo.ca"
 alias g++14="g++ -std=c++14 -Wall -g"
 
 export DEVOPS_HOME=/Users/mluo/workspace/ansible-playbooks
@@ -68,3 +69,6 @@ zle-line-init &> /dev/null
 export FZF_DEFAULT_OPTS="--extended"
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Z
+. ~/dotfiles/z.sh

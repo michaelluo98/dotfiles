@@ -69,6 +69,9 @@ set regexpengine=1 "use vim's old regex engine
 "set foldnestmax=10
 "set nofoldenable
 "set foldlevel=2
+"scala fold
+set foldmethod=indent
+set foldlevel=1
 
 " Spaces & Tabs
 set expandtab "tabs are spaces

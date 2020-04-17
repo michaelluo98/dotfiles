@@ -16,6 +16,7 @@ brew cask install iterm2
 brew cask install visual-studio-code
 brew cask install pgadmin4
 brew cask install sequel-pro
+brew cask install rectangle
 
 
 # Daily

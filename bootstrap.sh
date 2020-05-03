@@ -47,14 +47,18 @@ fi
 # Mac Defaults
 ./macos.sh
 
+# Other useful stuff
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+echo "Configuring global gitignore"
+git config --global core.excludesfile ~/.gitignore
+
 # Symlinks!
 ./symlink.sh
 
 # Vim plugins
 ./vim-plugins.sh
 
-echo "Configuring global gitignore"
-git config --global core.excludesfile ~/.gitignore
-
-# Other useful stuff
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

@@ -43,6 +43,8 @@ let ruby_fold = 1
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_new_list_item_indent = 2
 
+let g:rustfmt_autosave = 1
+
 " General Config:
 set nocompatible "better safe than sorry
 set linebreak

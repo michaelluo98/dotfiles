@@ -17,6 +17,7 @@ brew cask install visual-studio-code
 brew cask install pgadmin4
 brew cask install sequel-pro
 brew cask install rectangle
+brew cask install hazeover
 
 
 # Daily

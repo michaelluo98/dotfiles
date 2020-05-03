@@ -50,6 +50,8 @@ fi
 # Other useful stuff
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 

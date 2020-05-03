@@ -5,7 +5,7 @@
 
 ### Manually configure:
 ##### System Settings
-- [ ] system hotkeys for iterm and code
+- [ ] system hotkeys for apps
   - [reference](https://apple.stackexchange.com/a/167974)
 - [ ] map caps-lock to esc
 - [ ] reduce motion between displays
@@ -13,6 +13,8 @@
 
 ##### ITerm
 - [ ] send hex code 0x01 (left) and 0x05 (right)
+- [ ] system hotkey
+- [ ] color theme
 - [ ] altc bindings: preferences -> profile -> keyboard tab -> select behavior of option key to Esc+
   - [reference](https://github.com/junegunn/fzf/issues/164)
 

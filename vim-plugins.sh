@@ -16,4 +16,5 @@ git clone https://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby
 git clone https://github.com/plasticboy/vim-markdown.git ~/.vim/bundle/vim-markdown
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
 git clone https://github.com/flxf/uCpp.vim.git ~/.vim/bundle/uCpp.vim
+git clone https://github.com/hhvm/vim-hack.git ~/.vim/bundle/vim-hack
 

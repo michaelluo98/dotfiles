@@ -12,24 +12,24 @@ brew install caskroom/cask/brew-cask
 
 
 # Dev
-brew cask install iterm2
-brew cask install visual-studio-code
-brew cask install pgadmin4
-brew cask install sequel-pro
-brew cask install rectangle
-brew cask install hazeover
-brew cask install sourcetree
-brew cask install docker
+brew install --cask iterm2
+brew install --cask visual-studio-code
+brew install --cask pgadmin4
+brew install --cask sequel-pro
+brew install --cask rectangle
+brew install --cask hazeover
+brew install --cask sourcetree
+brew install --cask docker
 
 
 # Daily
-brew cask install flux
-brew cask install spotify
-brew cask install slack
-brew cask install google-chrome
+brew install --cask flux
+brew install --cask spotify
+brew install --cask slack
+brew install --cask google-chrome
 
 
 # Less Often
-brew cask install vlc
+brew install --cask vlc
 #brew cask install utorrent
 

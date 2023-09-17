@@ -22,8 +22,8 @@ bindkey '^r' history-incremental-search-backward
 setopt nosharehistory 
 
 source ~/.bash_profile
-alias vi=/usr/local/bin/vim
-alias vim=/usr/local/bin/vim
+alias vi=/opt/homebrew/bin/vim
+alias vim=/opt/homebrew/bin/vim
 alias fzft=fzf-tmux
 
 alias startgrip="grip --pass 5d3e32d460b00b8dec8b51534e1b49e47e42b9b6" 
@@ -37,6 +37,7 @@ export GH_OAUTH_TOKEN=615948363d27ab0a087833123321febb2d184e2d
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$HOME/go/bin:$PATH"
 
 # Functions
 # ch - browse chrome history
@@ -72,3 +73,5 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Z
 . ~/dotfiles/z.sh
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+chruby ruby-3.1.3
